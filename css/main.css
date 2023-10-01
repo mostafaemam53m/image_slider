@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider-container {
+  margin: 100px auto;
+  padding: 30px;
+  max-width: 50%;
+  max-height: 50%;
+  border: 2px #78ab78;
+  position: relative;
+}
+.slider-container .images {
+  margin: 20px auto;
+}
+.slider-container .images .slider-number {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  padding: 5px 5px;
+  background-color: #78ab78;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+.slider-container .images img {
+  position: absolute;
+  max-width: 300px;
+  max-height: 300px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+}
+.slider-container .images img.active {
+  opacity: 1;
+}
+.slider-container .slider-controls {
+  position: relative;
+  top: 185px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px #78ab78;
+  margin: 10px 0 auto;
+  padding: 2.5px 5px;
+}
+.slider-container .slider-controls #next,
+.slider-container .slider-controls #prev {
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  border: 2px solid gray;
+  background: #78ab78;
+  text-align: center;
+  color: white;
+}
+.slider-container .slider-controls #next.disable,
+.slider-container .slider-controls #prev.disable {
+  cursor: not-allowed;
+  background-color: rgba(119, 136, 170, 0.7333333333);
+}
+.slider-container .slider-controls #indicators {
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  border: 2px solid gray;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.slider-container .slider-controls #indicators span {
+  border: 1px #78ab78;
+  padding: 3px;
+  text-align: center;
+  color: black;
+  background-color: rgba(169, 162, 162, 0.6509803922);
+  transition: 1s;
+  cursor: pointer;
+}
+.slider-container .slider-controls #indicators span.active {
+  padding: 3px;
+  text-align: center;
+  color: white;
+  background-color: #78ab78;
+}
+.slider-container .slider-controls #indicators span:hover {
+  padding: 3px;
+  text-align: center;
+  color: white;
+  background-color: #78ab78;
+}/*# sourceMappingURL=main.css.map */
